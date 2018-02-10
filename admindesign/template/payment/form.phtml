@@ -1,1 +1,14 @@
-<p>duh</p>
+<div class="form-list" id="payment_form_<?php echo $this->getMethodCode() ?>" style="display:none;">
+    <div>
+        <label><?php echo $this->__('EAN Nummer') ?>*</label>
+        <span>
+      <input type="text" title="<?php echo $this->__('EAN Nummer') ?>" name="payment[ean_nummer]" value="<?php echo $this->htmlEscape($this->getInfoData('custom_field_one')) ?>" />
+    </span>
+    </div>
+    <div>
+        <label><?php echo $this->__('Afstemt') ?>*</label>
+        <span>
+      <input type="checkbox" title="<?php echo $this->__('Afstemt') ?>" name="payment[afstemt]" <?php if($this->getInfoData('afstemt')): ?>checked="checked"<?php endif; ?>/>
+    </span>
+    </div>
+</div>

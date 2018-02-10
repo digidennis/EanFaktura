@@ -26,6 +26,16 @@
                 <class>Digidennis_EanFaktura_Helper</class>
             </digidennis_eanfaktura>
         </helpers>
+        <fieldsets>
+            <sales_convert_quote_payment>
+                <ean_nummer>
+                    <to_order_payment>*</to_order_payment>
+                </ean_nummer>
+                <afstemt>
+                    <to_order_payment>*</to_order_payment>
+                </afstemt>
+            </sales_convert_quote_payment>
+        </fieldsets>
     </global>
 
     <default>
