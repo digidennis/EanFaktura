@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Digidennis_EanFaktura>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Digidennis_EanFaktura>
+    </modules>
+</config>

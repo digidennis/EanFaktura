@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+
+    <modules>
+        <Digidennis_EanFaktura>
+            <version>0.0.1</version>
+            <depends>
+                <Mage_Payment />
+            </depends>
+        </Digidennis_EanFaktura>
+    </modules>
+
+    <global>
+        <models>
+            <digidennis_eanfaktura>
+                <class>Digidennis_EanFaktura_Model</class>
+            </digidennis_eanfaktura>
+        </models>
+        <blocks>
+            <digidennis_eanfaktura>
+                <class>Digidennis_EanFaktura_Block</class>
+            </digidennis_eanfaktura>
+        </blocks>
+        <helpers>
+            <digidennis_eanfaktura>
+                <class>Digidennis_EanFaktura_Helper</class>
+            </digidennis_eanfaktura>
+        </helpers>
+    </global>
+
+    <default>
+        <payment>
+            <digidennis_eanfaktura>
+                <model>digidennis_eanfaktura/ean</model>// very important thing, here you select the model for your payment method
+                <active>1</active>
+                <order_status>pending</order_status>
+                <title>EAN Faktura</title>
+                <payment_action>sale</payment_action>
+                <sort_order>1</sort_order>
+            </digidennis_eanfaktura>
+        </payment>
+    </default>
+
+</config>
