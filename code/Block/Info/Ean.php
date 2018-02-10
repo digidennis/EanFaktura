@@ -4,7 +4,7 @@ class Digidennis_EanFaktura_Block_Info_Ean extends Mage_Payment_Block_Info
     protected function _construct()
     {
         parent::_construct();
-        $this->setTemplate('digidennis/eanfaktura/info/default.phtml');
+        $this->setTemplate('digidennis/eanfaktura/info/info.phtml');
     }
 
     protected function _prepareSpecificInformation($transport = null)
@@ -15,12 +15,12 @@ class Digidennis_EanFaktura_Block_Info_Ean extends Mage_Payment_Block_Info
         }
 
         $data = array();
-        if ($this->getInfo()->getCustomFieldOne())
+        if ($this->getInfo()->getEanNummer())
         {
             $data[Mage::helper('payment')->__('EAN Nummer')] = $this->getInfo()->getEanNummer();
         }
 
-        if ($this->getInfo()->getCustomFieldTwo())
+        if ($this->getInfo()->getAfstemt())
         {
             $data[Mage::helper('payment')->__('Afstemt')] = $this->getInfo()->getAfstemt();
         }
