@@ -1,3 +1,4 @@
 code                                app/code/local/Digidennis/EanFaktura/
 admindesign/template/*              app/design/adminhtml/default/default/template/digidennis/eanfaktura/
+design/template/*                   app/design/frontend/base/default/template/digidennis/eanfaktura/
 Digidennis_EanFaktura.xml           app/etc/modules/Digidennis_EanFaktura.xml
