@@ -1,5 +1,5 @@
 <?php
-class Digidennis_EanFaktura_Block_Info_Quickpay extends Mage_Payment_Block_Info
+class Digidennis_EanFaktura_Block_Info_Ean extends Mage_Payment_Block_Info
 {
     protected function _construct()
     {
