@@ -1,1 +1,6 @@
-<?php echo $this->getSpecificInformation(); ?>
+<p><b>EAN Faktura</b><br>
+    <?php $_info = $this->getSpecificInformation(); ?>
+    <?php foreach ($_info as $label=>$value): ?>
+        <?php echo $label; ?>: <?php echo $value; ?><br>
+    <?php endforeach; ?>
+</p>
