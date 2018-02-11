@@ -30,6 +30,14 @@
             </digidennis_eanfaktura>
         </helpers>
 
+        <resources>
+            <digidennis_eanfaktura_setup>
+                <setup>
+                    <module>Digidennis_EanFaktura</module>
+                </setup>
+            </digidennis_eanfaktura_setup>
+        </resources>
+
         <fieldsets>
             <sales_convert_quote_payment>
                 <ean_nummer>
@@ -40,14 +48,6 @@
                 </afstemt>
             </sales_convert_quote_payment>
         </fieldsets>
-
-        <resources>
-            <digidennis_eanfaktura_setup>
-                <setup>
-                    <module>Digidennis_EanFaktura</module>
-                </setup>
-            </digidennis_eanfaktura_setup>
-        </resources>
 
     </global>
 
