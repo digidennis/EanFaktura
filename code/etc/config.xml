@@ -51,10 +51,36 @@
 
     </global>
 
+    <admin>
+        <routers>
+            <digidennis_eanfaktura>
+                <use>admin</use>
+                <args>
+                    <module>Digidennis_EanFaktura</module>
+                    <frontName>eanfaktura</frontName>
+                </args>
+            </digidennis_eanfaktura>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <events>
+            <core_block_abstract_prepare_layout_before>
+                <observers>
+                    <digidennis_eanfaktura_core_block_abstract_prepare_layout_before>
+                        <type>model</type>
+                        <class>Digidennis_EanFaktura_Model_Observer</class>
+                        <method>completeOrderAction</method>
+                    </digidennis_eanfaktura_core_block_abstract_prepare_layout_before>
+                </observers>
+            </core_block_abstract_prepare_layout_before>
+        </events>
+    </adminhtml>
+
     <default>
         <payment>
             <digidennis_eanfaktura>
-                <model>digidennis_eanfaktura/ean</model>// very important thing, here you select the model for your payment method
+                <model>digidennis_eanfaktura/ean</model>
                 <active>1</active>
                 <order_status>pending</order_status>
                 <title>EAN Faktura</title>
