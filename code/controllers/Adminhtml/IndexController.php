@@ -23,8 +23,7 @@ class Digidennis_EanFaktura_Adminhtml_IndexController extends Mage_Adminhtml_Con
     {
         if ($order = $this->_initOrder()) {
             try {
-                $order->setState('complete', true)
-                    ->save();
+                $order->addStatusToHistory(Mage_Sales_Model_Order::STATE_COMPLETE)->save();
                 $this->_getSession()->addSuccess(
                     $this->__('The order state has been changed.')
                 );

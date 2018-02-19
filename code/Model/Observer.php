@@ -9,12 +9,12 @@ class Digidennis_EanFaktura_Model_Observer
         $order = Mage::registry('current_order');
 
         if ($order &&
-            $order->getPayment()->getMethodInstance()->getCode()== 'digidennis_eanfaktura' &&
+            $order->getPayment()->getMethodInstance()->getCode() == 'digidennis_eanfaktura' &&
             $block instanceof Mage_Adminhtml_Block_Sales_Order_View
         ) {
             $message = Mage::helper('sales')->__('Are you sure you want to Change Status?');
             $block->addButton('in_shipment',
-                array( 'label' => Mage::helper('sales')->__($order->getIncrementId()),
+                array( 'label' => Mage::helper('sales')->__('Complete'),
                     'onclick' => "confirmSetLocation('{$message}', '{$block->getUrl('eanfaktura/adminhtml_index/complete')}')", 'class' => 'go' ));
         }
     }
